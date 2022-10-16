@@ -1,0 +1,158 @@
+.container {
+  width: 70%;
+  padding: 20px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform: translate(25%, 5%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (max-width: 600px) {
+    margin-top: 20px;
+    width: 100vw;
+    padding: 5px;
+    transform: translate(0, 5%);
+  }
+}
+
+.wrapper-container {
+  width: 80%;
+  height: 80%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    padding: 5px;
+  }
+}
+
+.fa {
+  cursor: pointer;
+}
+
+/* Print header start here */
+.print-header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.print-logo {
+  max-width: 150px;
+  @media only screen and (max-width: 600px) {
+    width: 80px;
+    padding: 5px;
+  }
+}
+
+.transaction-title {
+  font-size: 24px;
+  font-weight: 400;
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.amount-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.amount-title {
+  font-size: 16px;
+  font-weight: 300;
+  @media only screen and (max-width: 600px) {
+    font-size: 10px;
+  }
+}
+
+.amount {
+  font-size: 16px;
+  font-weight: 900;
+  @media only screen and (max-width: 600px) {
+    font-size: 10px;
+  }
+}
+
+.summary {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.detail {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.left-detail {
+}
+
+.left-title {
+  font-size: 18px;
+  font-weight: 300;
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.right-detail {
+}
+
+.right-title {
+  font-weight: 500;
+  font-size: 16px;
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.paragraph {
+  font-size: 12px;
+  font-weight: 300;
+  @media only screen and (max-width: 600px) {
+    font-size: 10px;
+  }
+}
+
+.desc-title {
+  text-transform: uppercase;
+  font-size: 10px;
+  @media only screen and (max-width: 600px) {
+    font-size: 8px;
+  }
+}
+
+.print-buton {
+  background-color: transparent;
+  border: none;
+}
+
+@media print {
+  .print-buton {
+    display: none;
+  }
+}

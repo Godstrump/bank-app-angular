@@ -1,0 +1,66 @@
+<app-header></app-header>
+
+<div class="trans-container">
+  <!-- Payment component -->
+  <ng-container *ngIf="isPrinting">
+    <app-print (closePrintEvent)="closePrint()" [payment]="payment"></app-print>
+  </ng-container>
+
+  <!-- Transactions wrapper -->
+  <div
+    class="wrapper"
+    [ngClass]="{ 'print-trans': isPrinting, spinner: loading }"
+  >
+    <table class="table" *ngIf="!loading">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">S/N</th>
+          <th scope="col">SENDER</th>
+          <th scope="col">RECEIVER</th>
+          <th scope="col">AMOUNT</th>
+          <th scope="col">STATUS</th>
+          <th scope="col">DATE</th>
+          <th scope="col" class="hide-element">REFERENCE ID</th>
+
+          <th scope="col" class="hide-element"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let payment of payments; index as i"
+          (click)="printTransaction(payment)"
+        >
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ payment.sender }}</td>
+          <td>{{ payment.receiver }}</td>
+          <td>{{ payment.amount | currency:"NGN"}}</td>
+
+          <td>{{ payment.transactionStatus }}</td>
+          <td>{{ payment.transactionDate | date }}</td>
+          <td class="hide-element">{{ payment.transactionRef }}</td>
+          <td class="hide-element">
+            <i
+              class="fa fa-eye text-primary trans-fa"
+              title="View Receipt details"
+              (click)="
+                printTransaction(payment); $event.stopImmediatePropagation()
+              "
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="roller" *ngIf="loading">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>

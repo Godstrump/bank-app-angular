@@ -1,0 +1,65 @@
+.payment {
+  border: 1px solid lightgray;
+  padding: 5px;
+  border-radius: 15px;
+  position: relative;
+  padding-top: 15px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 10px;
+    width: 90vw;
+  }
+}
+
+.payment-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(150%, -50%);
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+  border: 1px solid lightgray;
+  border-bottom: none;
+  border-radius: 5px;
+  @media only screen and (max-width: 600px) {
+    transform: translate(120%, -50%);
+  }
+}
+
+.pay {
+  border-radius: 10px;
+  background-color: black;
+  padding: 10px;
+  height: 30px;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.pay:hover {
+  transform: scale(1.05);
+}
+
+.pay-back {
+  position: absolute;
+  right: 40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.payment-form-group {
+  width: 400px;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}

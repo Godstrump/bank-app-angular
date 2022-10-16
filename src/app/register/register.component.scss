@@ -1,0 +1,68 @@
+.register-container {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-card {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.register-card-item {
+  width: 100%;
+  display: flex;
+  @media only screen and (max-width: 600px) {
+    display: block;
+    z-index: 2;
+  }
+}
+
+.register-form-group {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.register-icon {
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (max-width: 600px) {
+    width: 15%;
+    height: 50px;
+  }
+}
+
+.register-form-control {
+  flex: 4;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+    height: 50px;
+  }
+}
